@@ -1,0 +1,1 @@
+A project for exercising and experimenting authentication in Next.js apps.
