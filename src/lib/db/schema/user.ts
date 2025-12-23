@@ -1,11 +1,13 @@
-import { sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { randomUUIDv7 } from "bun";
-import { createInsertSchema } from "drizzle-zod";
+import { sqliteTable, text } from 'drizzle-orm/sqlite-core'
+import { randomUUIDv7 } from 'bun'
+import { createInsertSchema } from 'drizzle-zod'
 
 export const usersTable = sqliteTable('users', {
-    id: text().primaryKey().$defaultFn(() => randomUUIDv7()),
-    username: text().notNull().unique(),
-    passwordHash: text().notNull()
+  id: text()
+    .primaryKey()
+    .$defaultFn(() => randomUUIDv7()),
+  username: text().notNull().unique(),
+  passwordHash: text().notNull()
 })
 
 export type UsersTable = typeof usersTable

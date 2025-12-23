@@ -1,5 +1,5 @@
-declare module "bun" {
-    interface Env {
-        DB_FILE: string
-    }
+declare module 'bun' {
+  interface Env {
+    DB_FILE: string
+  }
 }

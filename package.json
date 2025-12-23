@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "bun src/lib/db/migrator.ts"
+    "db:migrate": "bun src/lib/db/migrator.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "drizzle-orm": "^0.45.1",
@@ -26,6 +28,9 @@
     "drizzle-kit": "^0.31.8",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
+    "prettier": "^3.7.4",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   },
