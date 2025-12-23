@@ -5,8 +5,14 @@
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
 		"ghcr.io/shyim/devcontainers-features/bun:0": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"qwtel.sqlite-viewer"
+			]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
