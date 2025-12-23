@@ -1,5 +1,6 @@
 import { sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { randomUUIDv7 } from "bun";
+import { createInsertSchema } from "drizzle-zod";
 
 export const usersTable = sqliteTable('users', {
     id: text().primaryKey().$defaultFn(() => randomUUIDv7()),
@@ -10,3 +11,5 @@ export const usersTable = sqliteTable('users', {
 export type UsersTable = typeof usersTable
 export type UserInsert = typeof usersTable.$inferInsert
 export type UserSelect = typeof usersTable.$inferSelect
+
+export const userInsertSchema = createInsertSchema(usersTable)
